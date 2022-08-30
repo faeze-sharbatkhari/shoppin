@@ -3,7 +3,7 @@ import Product from './product';
 import ProductNav from './productNav';
 import productsTOP from './products';
 
-const ProductsTSHW = ({onClick}) => {
+const ProductsTSHW = ({onClick,onChange,onChangesiz}) => {
   
     return ( 
         <>
@@ -17,7 +17,8 @@ const ProductsTSHW = ({onClick}) => {
                 key={item.id}
                 item={item}
                 onClick={onClick}
-               
+                onChange={onChange}
+                onChangesiz={onChangesiz}
                 />
               
                })

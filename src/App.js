@@ -19,17 +19,30 @@ import Footer from './component/footer';
 function App() {
   const[cart,setcart]=useState([])
   const [cont,setcont]=useState(0)
-
-  // const[colorvalue,setcolorvalue]=useState()
-
+const[colorvalu,setcolorvalue]=useState()
+const[sizevalu,setsizevalue]=useState()
 
   const handleclick=(item)=>{
 if (cart.indexOf(item) !== -1) return;
- 
 
-      setcart([...cart,item]);
+item.color=colorvalu
+item.siz=sizevalu
+ setcart([...cart,item]);
       setcont(cont+1)
+   
     };
+
+   const handleChangecolor=(e)=>{
+     const colorvalue=e.target.value
+    // document.getElementById('testid').value
+    setcolorvalue(colorvalue)
+    }
+    const handleChangesize=(e)=>{
+      const sizevalue=e.target.value
+     // document.getElementById('testid').value
+     setsizevalue(sizevalue)
+     }
+    
 
     const handleChange = (item, d) => {
       const ind = cart.indexOf(item);
@@ -51,12 +64,12 @@ if (cart.indexOf(item) !== -1) return;
        <Route path='/question' element={<Question/>} />
        <Route path='/shoppingguide' element={<Guide/>} /> 
        <Route path='/suport' element={<Suport/>} /> 
-        <Route path="/productTOP" element={<Productstop onClick={handleclick} />} /> 
-        <Route path="/productsTSHW" element={<ProductsTSHW onClick={handleclick}  />} /> 
-        <Route path="/productsTONIK" element={<ProductsTONIK onClick={handleclick}  />} /> 
-        <Route path="/productsPRH" element={<ProductsPRH onClick={handleclick}  />} /> 
-        <Route path="/productsSHLVR" element={<ProductsSHLVR onClick={handleclick}  />} /> 
-        <Route path="/cart" element={<Cart cart={cart} setCart={setcart} handleChange={handleChange} cont={cont} setcont={setcont} />} /> 
+        <Route path="/productTOP" element={<Productstop onClick={handleclick} onChange={handleChangecolor} onChangesiz={handleChangesize} />} /> 
+        <Route path="/productsTSHW" element={<ProductsTSHW onClick={handleclick} onChange={handleChangecolor} onChangesiz={handleChangesize} />} /> 
+        <Route path="/productsTONIK" element={<ProductsTONIK onClick={handleclick}  onChange={handleChangecolor} onChangesiz={handleChangesize}/>} /> 
+        <Route path="/productsPRH" element={<ProductsPRH onClick={handleclick}  onChange={handleChangecolor}onChangesiz={handleChangesize}/>} /> 
+        <Route path="/productsSHLVR" element={<ProductsSHLVR onClick={handleclick}  onChange={handleChangecolor} onChangesiz={handleChangesize}/>} /> 
+        <Route path="/cart" element={<Cart cart={cart} setCart={setcart} handleChange={handleChange} cont={cont} setcont={setcont}  onChange={handleChangecolor} />} /> 
 </Routes>
 <Footer/>
    </>

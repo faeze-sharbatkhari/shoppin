@@ -5,9 +5,8 @@ import "react-slideshow-image/dist/styles.css";
 import Collapsbtn from "./collapsbutton";
 import Size from "./size";
 
-const Product = ({ item, onClick,}) => {
+const Product = ({ item, onClick,onChange,onChangesiz}) => {
   const { id, name, price, url, colors, color, subject, size } = item;
-
   return (
     <>
       <div
@@ -40,10 +39,12 @@ const Product = ({ item, onClick,}) => {
         <h5>{price}تومان</h5>
         <div className="row justify-content-end">
           <div className="col-6 d-grid w-auto">
-             <select>
+             <select id="testid" onChange={onChange}>
+              <option value="0">رنگبندی</option>
               <Colors key={colors.lenght} Colorsname={colors} />
             </select>
-            <select >
+            <select id="idtest" onChange={onChangesiz}>
+              <option value="-1">سایز بندی</option>
               <Size key={size.lenght} sizename={size} />
             </select> 
           
@@ -72,7 +73,9 @@ const Product = ({ item, onClick,}) => {
             </button>
           </div>
         </div>
+        <div>
         <Collapsbtn id={id} name="بیشتر" subject={subject} />
+        </div>
       </div>
     </>
   );

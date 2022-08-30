@@ -3,7 +3,7 @@ import Product from './product';
 import ProductNav from './productNav';
 import productsTOP from './products';
 
-const Productstop = ({onClick}) => {
+const Productstop = ({onClick,onChange,onChangesiz}) => {
   
     return ( 
         <>
@@ -17,7 +17,8 @@ const Productstop = ({onClick}) => {
                 key={item.id}
                 item={item}
                 onClick={onClick}
-                
+                onChange={onChange}
+                onChangesiz={onChangesiz}
                 />
               
                })

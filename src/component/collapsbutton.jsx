@@ -16,7 +16,7 @@ function Collapsbtn(props) {
         {props.name}
       </Button>
       <Collapse in={open}>
-        <div id={props.id} className='text-center'>
+        <div id={props.id} className='text-center bg-warning  rounded-pill p-3' style={{}}>
          {props.subject}
           </div>
       </Collapse>

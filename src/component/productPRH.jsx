@@ -3,7 +3,7 @@ import Product from './product';
 import ProductNav from './productNav';
 import productsTOP from './products';
 
-const ProductsPRH = ({onClick}) => {
+const ProductsPRH = ({onClick,onChange,onChangesiz}) => {
   
     return ( 
         <>
@@ -17,6 +17,8 @@ const ProductsPRH = ({onClick}) => {
                 key={item.id}
                 item={item}
                 onClick={onClick}
+                onChange={onChange}
+                onChangesiz={onChangesiz}
                 />
               
                })

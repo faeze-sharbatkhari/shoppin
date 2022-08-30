@@ -3,7 +3,7 @@ import Product from './product';
 import ProductNav from './productNav';
 import productsTOP from './products';
 
-const ProductsSHLVR = ({onClick}) => {
+const ProductsSHLVR = ({onClick,onChange,onChangesiz}) => {
   
     return ( 
         <>
@@ -17,6 +17,8 @@ const ProductsSHLVR = ({onClick}) => {
                 key={item.id}
                 item={item}
                 onClick={onClick}
+                onChange={onChange}
+                onChangesiz={onChangesiz}
                 />
               
                })
