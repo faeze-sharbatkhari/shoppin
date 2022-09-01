@@ -1,14 +1,17 @@
 import React from 'react';
 import Slideshow from './slidshow';
 import Favarit from './favarit';
-import Footer from './footer';
+import Scrollbox from './scrollbox';
+import Sallbox from './sallbox';
 
-const Home = ({onClick}) => {
+const Home = ({onClick,onChange,onChangesiz}) => {
     return ( 
 <>
 <Slideshow/>
-  <h2 className="m-3 p-3 border-bottom border-end border-danger Regular shadow" style={{'textAlign':'right'}}>تک های هلن</h2>
-<Favarit onClick={onClick}/>
+
+<Favarit onClick={onClick} onChangesiz={onChangesiz} onChange={onChange}/>
+<Scrollbox onChange={onChange} onChangesiz={onChangesiz} onClick={onClick}/>
+<Sallbox/>
 
 </>
 

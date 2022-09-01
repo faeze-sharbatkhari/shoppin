@@ -59,7 +59,7 @@ item.siz=sizevalu
  
   <Navbar cont={cont}/>
      <Routes>
-       <Route path='/' element={<Home onClick={handleclick}/>} />  
+       <Route path='/' element={<Home onClick={handleclick} onChange={handleChangecolor} onChangesiz={handleChangesize}/>} />  
        <Route path="/abouthelen" element={<Abouthelen/>} />
        <Route path='/question' element={<Question/>} />
        <Route path='/shoppingguide' element={<Guide/>} /> 
