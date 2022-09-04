@@ -14,6 +14,9 @@ import ProductsTONIK from './component/productTONIK';
 import ProductsPRH from './component/productPRH';
 import ProductsSHLVR from './component/productsSHLVR';
 import Footer from './component/footer';
+import ProductTAK from './component/productTAK';
+import Prductoffer from './component/productsoffer';
+import ProductSALL from './component/productSALL';
 
 
 function App() {
@@ -23,7 +26,7 @@ const[colorvalu,setcolorvalue]=useState()
 const[sizevalu,setsizevalue]=useState()
 
   const handleclick=(item)=>{
-if (cart.indexOf(item) !== -1) return;
+if (cart.indexOf(item) !== -1|| item.color!==colorvalu) return;
 
 item.color=colorvalu
 item.siz=sizevalu
@@ -69,6 +72,9 @@ item.siz=sizevalu
         <Route path="/productsTONIK" element={<ProductsTONIK onClick={handleclick}  onChange={handleChangecolor} onChangesiz={handleChangesize}/>} /> 
         <Route path="/productsPRH" element={<ProductsPRH onClick={handleclick}  onChange={handleChangecolor}onChangesiz={handleChangesize}/>} /> 
         <Route path="/productsSHLVR" element={<ProductsSHLVR onClick={handleclick}  onChange={handleChangecolor} onChangesiz={handleChangesize}/>} /> 
+        <Route path="/productTAK" element={<ProductTAK onClick={handleclick}  onChange={handleChangecolor} onChangesiz={handleChangesize}/>} /> 
+        <Route path="/Productoffer" element={<Prductoffer onClick={handleclick}  onChange={handleChangecolor} onChangesiz={handleChangesize}/>} /> 
+        <Route path="/ProductSALL" element={<ProductSALL onClick={handleclick}  onChange={handleChangecolor} onChangesiz={handleChangesize}/>} /> 
         <Route path="/cart" element={<Cart cart={cart} setCart={setcart} handleChange={handleChange} cont={cont} setcont={setcont}  onChange={handleChangecolor} />} /> 
 </Routes>
 <Footer/>

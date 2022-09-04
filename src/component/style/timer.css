@@ -1,0 +1,11 @@
+div.box {
+    border: 3px solid gray;
+    border-radius: 50%;
+    margin: 1rem;
+    text-align: center;
+    box-shadow: 10px 10px 5px black;
+
+}
+#timer{
+    display: inline-flex;
+}

@@ -1,18 +1,16 @@
-
-import Product from './product';
+import React from 'react';
 import ProductNav from './productNav';
 import productsTOP from './products';
+import Product from './product';
 
-
-const ProductsTONIK = ({onClick,onChange,onChangesiz}) => {
-  
+const Prductoffer = ({onClick,onChange,onChangesiz}) => {
     return ( 
         <>
         <ProductNav/>
-        <div className='row'>
+        <div className='row mt-1' style={{'backgroundColor':' cornflowerblue'}}>
         {
             productsTOP.filter((item)=>{
-                 return  item.id<22&&item.id>14
+                 return  item.id<64&&item.id>49
             }).map((item)=>{
                 return <Product 
                 key={item.id}
@@ -30,4 +28,4 @@ const ProductsTONIK = ({onClick,onChange,onChangesiz}) => {
      );
 }
  
-export default ProductsTONIK;
+export default Prductoffer;

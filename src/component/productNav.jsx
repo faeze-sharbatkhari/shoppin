@@ -10,6 +10,8 @@ const ProductNav = () => {
   <NavLink className="nav-link bg-danger text-light" to="/productsTONIK">تونیک</NavLink>
   <NavLink className="nav-link bg-danger text-light" to="/productsPRH">پیراهن زنانه</NavLink>
   <NavLink className="nav-link bg-danger text-light" to="/productsSHLVR">شلوار زنانه</NavLink>
+  <NavLink className="nav-link bg-danger text-light" to="/productTAK">تک های هلن</NavLink>
+  
 </nav>
         </>
     );
