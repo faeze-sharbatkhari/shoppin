@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './style/cart.css'
-import Colors from "./colors";
+
 
 const Cart = ({ cart, setCart, handleChange,cont,setcont}) => {
   const [price, setPrice] = useState(0);
@@ -30,20 +30,26 @@ const Cart = ({ cart, setCart, handleChange,cont,setcont}) => {
         <div className="cart_box" key={item.id}>
           <div className="cart_img">
             <img src={item.url} alt="" />
+            <div>
             <p>{item.name}</p>
             <p>{item.color}</p>
             <p>{item.siz}</p>
-          </div>
-          <div>
-            <button onClick={() => handleChange(item, 1)}>+</button>
+       </div>
+
+            </div>
+         
+        
+
+       <div className="d-grid">
+            <span className="price">{item.price}</span>
+            <button className="removbtn" onClick={() => handleRemove(item.id)}>Remove</button>
+            <div className="d-flex">
+         <button onClick={() => handleChange(item, 1)}>+</button>
             <button>{item.amount}</button>
             <button onClick={() => handleChange(item, -1)}>-</button>
-          </div>
-          <div>
-            <span>{item.price}</span>
-            <button onClick={() => handleRemove(item.id)}>Remove</button>
-          </div>
-        </div>
+             </div>
+       </div>   
+       </div>
       ))}
       <div className="total">
         <div >

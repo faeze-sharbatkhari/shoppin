@@ -29,25 +29,25 @@ const Timer = () => {
   return (
     <>
      <div className="timer d-flex fs-1" role="timer">
-      <div className="col-4">
+      <div className="col-6 col-sm-3">
         <div className="box">
           <p id="day">{days < 10 ? "0" + days : days}</p>
           <span className="text">روز</span>
         </div>
       </div>
-      <div className="col-4">
+      <div className="col-6 col-sm-3">
         <div className="box">
           <p id="hour">{hours < 10 ? "0" + hours : hours}</p>
           <span className="text">ساعت</span>
         </div>
       </div>
-      <div className="col-4">
-        <div className="box">
+      <div className="col-3 d-none d-sm-block">
+        <div className="box ">
           <p id="minute">{minutes < 10 ? "0" + minutes : minutes} </p>
           <span className="text">دقیقه</span>
         </div>
       </div>
-      <div className="col-4">
+      <div className="col-3 d-none d-sm-block">
         <div className="box">
           <p id="second">{seconds < 10 ? "0" + seconds : seconds}</p>
           <span className="text">ثانیه</span>

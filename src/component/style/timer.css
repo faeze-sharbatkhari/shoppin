@@ -7,5 +7,6 @@ div.box {
 
 }
 #timer{
-    display: inline-flex;
+ 
+    width: -webkit-fill-available;
 }

@@ -10,7 +10,7 @@ const Prductoffer = ({onClick,onChange,onChangesiz}) => {
         <div className='row mt-1' style={{'backgroundColor':' cornflowerblue'}}>
         {
             productsTOP.filter((item)=>{
-                 return  item.id<64&&item.id>49
+                 return  item.id<50&&item.id>35
             }).map((item)=>{
                 return <Product 
                 key={item.id}

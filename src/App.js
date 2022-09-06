@@ -24,22 +24,27 @@ function App() {
   const [cont,setcont]=useState(0)
 const[colorvalu,setcolorvalue]=useState()
 const[sizevalu,setsizevalue]=useState()
+const[colorvalutow,setcolorvaluetow]=useState()
 
+//if (cart.indexOf(item) !== -1) return;
   const handleclick=(item)=>{
-if (cart.indexOf(item) !== -1|| item.color!==colorvalu) return;
+
 
 item.color=colorvalu
 item.siz=sizevalu
  setcart([...cart,item]);
       setcont(cont+1)
-   
+
     };
 
    const handleChangecolor=(e)=>{
      const colorvalue=e.target.value
     // document.getElementById('testid').value
+  
     setcolorvalue(colorvalue)
+    
     }
+
     const handleChangesize=(e)=>{
       const sizevalue=e.target.value
      // document.getElementById('testid').value
@@ -69,13 +74,13 @@ item.siz=sizevalu
        <Route path='/suport' element={<Suport/>} /> 
         <Route path="/productTOP" element={<Productstop onClick={handleclick} onChange={handleChangecolor} onChangesiz={handleChangesize} />} /> 
         <Route path="/productsTSHW" element={<ProductsTSHW onClick={handleclick} onChange={handleChangecolor} onChangesiz={handleChangesize} />} /> 
-        <Route path="/productsTONIK" element={<ProductsTONIK onClick={handleclick}  onChange={handleChangecolor} onChangesiz={handleChangesize}/>} /> 
-        <Route path="/productsPRH" element={<ProductsPRH onClick={handleclick}  onChange={handleChangecolor}onChangesiz={handleChangesize}/>} /> 
+        <Route path="/productsTONIK" element={<ProductsTONIK onClick={handleclick} onChange={handleChangecolor} onChangesiz={handleChangesize} />} /> 
+        <Route path="/productsPRH" element={<ProductsPRH onClick={handleclick} onChange={handleChangecolor} onChangesiz={handleChangesize} />} /> 
         <Route path="/productsSHLVR" element={<ProductsSHLVR onClick={handleclick}  onChange={handleChangecolor} onChangesiz={handleChangesize}/>} /> 
         <Route path="/productTAK" element={<ProductTAK onClick={handleclick}  onChange={handleChangecolor} onChangesiz={handleChangesize}/>} /> 
-        <Route path="/Productoffer" element={<Prductoffer onClick={handleclick}  onChange={handleChangecolor} onChangesiz={handleChangesize}/>} /> 
+        <Route path="/Productoffer" element={<Prductoffer onClick={handleclick} onChange={handleChangecolor} onChangesiz={handleChangesize} />} /> 
         <Route path="/ProductSALL" element={<ProductSALL onClick={handleclick}  onChange={handleChangecolor} onChangesiz={handleChangesize}/>} /> 
-        <Route path="/cart" element={<Cart cart={cart} setCart={setcart} handleChange={handleChange} cont={cont} setcont={setcont}  onChange={handleChangecolor} />} /> 
+        <Route path="/cart" element={<Cart cart={cart} setCart={setcart} handleChange={handleChange} cont={cont} setcont={setcont}   />} /> 
 </Routes>
 <Footer/>
    </>
@@ -83,3 +88,4 @@ item.siz=sizevalu
 }
 
 export default App;
+

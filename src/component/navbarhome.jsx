@@ -10,13 +10,13 @@ const Navbarhome = () => {
     <NavLink className="nav-link active " aria-current="page" to="/ProductSALL">* فروش ویژه تابستانه *</NavLink>
   </li>
   <li className="nav-item navhom">
-    <NavLink className="nav-link" to="/Productoffer">پیشنهاد های شگفت انگیز</NavLink>
+    <NavLink className="nav-link  " to="/Productoffer">پیشنهاد های شگفت انگیز</NavLink>
   </li>
   <li className="nav-item navhom">
     <NavLink className="nav-link" to="/productTAK">تک های هلن</NavLink>
   </li>
 
-<form className="d-flex " role="search">
+<form className="d-flex mt-3 " role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-warning" type="submit">Search</button>
       </form>

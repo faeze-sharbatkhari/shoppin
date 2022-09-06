@@ -7,9 +7,11 @@ div.scrollmenu {
     } 
 #takscroll{
    background-color: pink;
+   direction: rtl;
 }
 
   #takhelen {
     background-color: pink;
+    direction: rtl;
   }
     

@@ -37,7 +37,7 @@
     margin-right: 5px;
   }
   
-  .cart_box div:nth-child(3) button {
+  .cart_box button.removbtn{
     padding: 5px 10px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -48,10 +48,10 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  .cart_box div:nth-child(3) button:hover {
+  .cart_box button.removbtn:hover {
     background-color: darkseagreen;
   }
-  .cart_box div:nth-child(3) span {
+  .cart_box span.price {
     background-color: lightgreen;
     padding: 5px 10px;
     border-radius: 5px;

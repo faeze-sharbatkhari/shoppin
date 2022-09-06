@@ -10,7 +10,7 @@ const Sallbox = () => {
             <NavLink to='/ProductSALL' className='col-md-4 m-3' >
                 <img className='shadow-lg rounded'  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS3WWveLHkGrONHGC5rh8iqBmq8IpWpmih1A&usqp=CAU" alt="" width='100%'/>
             </NavLink>
-            <div className='col-md-6 ' id='timer' style={{'position':'relative','left': '25%'}}>
+            <div className='col-md-6 bg-warning rounded ' id='timer'>
             <Timer/>
             </div>
         </div>
