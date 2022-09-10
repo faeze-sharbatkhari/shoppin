@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import './style/timer.css'
 import Timer from './timer';
-import productsTOP from './products';
+import products from './products';
 import Product from './product';
 
 const ProductSALL = (onClick,onChange,onChangesiz) => {
@@ -42,7 +42,7 @@ const ProductSALL = (onClick,onChange,onChangesiz) => {
         minutes=='00'&& seconds=='00'&& hours=='00'&& days=='00' ? 
         <div className='row mt-1' style={{'background':'linear-gradient(-70deg, #00EAD3,#FFF5B7,#FF449F,#005F99)'}}>
         {
-            productsTOP.filter((item)=>{
+            products.filter((item)=>{
                  return  item.id<64&&item.id>49
             }).map((item)=>{
                 return <Product 

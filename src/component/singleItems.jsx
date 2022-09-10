@@ -1,17 +1,46 @@
 import React from 'react';
 import './style/favarit.css'
-import productsTOP from './products';
+import products from './products';
 import Product from './product';
 import { NavLink } from 'react-router-dom';
 
-const Favarit = ({onClick,onChange,onChangesiz}) => {
+const SingleItems = ({onClick,onChange,onChangesiz}) => {
     return ( 
         <>
        <h1 className='p-3 shadow-lg m-5' id='takhelen'>تک های هلن</h1>
-        <div className="scrollmenu" id='takscroll'>
+
+       <div className="row d-md-none" style={{'backgroundColor':'pink'}}>
+    {
+            products.filter((item)=>{
+                 return item.id<53 && item.id>49;
+            }).map((item)=>{
+                return <Product 
+                key={item.id}
+                item={item}
+                onClick={onClick}
+                onChange={onChange}
+                onChangesiz={onChangesiz}
+                />
+              
+               })
              
+        }
+
+  <div className=' d-flex align-items-center p-5 border rounded-circle border-5'>
+  <NavLink to='/Productoffer' className='text-light fs-1 ' style={{
+                  textDecoration: 'none',
+                  margin: 'auto',
+                 
+            }}>
+      بیشتر ببینید
+  </NavLink>
+</div>
+</div>
+
+        <div className="scrollmenu d-none d-md-flex" id='takscroll'>
+        
        {
-            productsTOP.filter((item)=>{
+            products.filter((item)=>{
                  return item.id<57 && item.id>49;
             }).map((item)=>{
                 return <Product 
@@ -43,4 +72,4 @@ const Favarit = ({onClick,onChange,onChangesiz}) => {
 }
 
  
-export default Favarit;
+export default SingleItems;

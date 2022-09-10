@@ -24,11 +24,10 @@ function App() {
   const [cont,setcont]=useState(0)
 const[colorvalu,setcolorvalue]=useState()
 const[sizevalu,setsizevalue]=useState()
-const[colorvalutow,setcolorvaluetow]=useState()
 
-//if (cart.indexOf(item) !== -1) return;
+
   const handleclick=(item)=>{
-
+if (cart.indexOf(item) !== -1) return;
 
 item.color=colorvalu
 item.siz=sizevalu

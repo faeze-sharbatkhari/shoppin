@@ -1,7 +1,7 @@
 
 import Product from './product';
 import ProductNav from './productNav';
-import productsTOP from './products';
+import products from './products';
 
 const ProductsPRH = ({onClick,onChange,onChangesiz}) => {
   
@@ -10,7 +10,7 @@ const ProductsPRH = ({onClick,onChange,onChangesiz}) => {
         <ProductNav/>
         <div className='row'>
         {
-            productsTOP.filter((item)=>{
+            products.filter((item)=>{
                  return  item.id<29&&item.id>21
             }).map((item)=>{
                 return <Product 

@@ -1,7 +1,7 @@
 
 import Product from './product';
 import ProductNav from './productNav';
-import productsTOP from './products';
+import products from './products';
 
 
 const ProductsTONIK = ({onClick,onChange,onChangesiz}) => {
@@ -11,7 +11,7 @@ const ProductsTONIK = ({onClick,onChange,onChangesiz}) => {
         <ProductNav/>
         <div className='row'>
         {
-            productsTOP.filter((item)=>{
+            products.filter((item)=>{
                  return  item.id<22&&item.id>14
             }).map((item)=>{
                 return <Product 

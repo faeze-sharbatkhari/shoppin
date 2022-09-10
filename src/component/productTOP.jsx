@@ -1,7 +1,7 @@
 import React from 'react';
 import Product from './product';
 import ProductNav from './productNav';
-import productsTOP from './products';
+import products from './products';
 
 const Productstop = ({onClick,onChange,onChangesiz}) => {
   
@@ -10,7 +10,7 @@ const Productstop = ({onClick,onChange,onChangesiz}) => {
         <ProductNav/>
         <div className='row'>
         {
-            productsTOP.filter((item)=>{
+            products.filter((item)=>{
                  return item.id<8
             }).map((item)=>{
                 return <Product 

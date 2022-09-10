@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Colors from "./colors";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
@@ -10,7 +10,7 @@ const Product = ({ item, onClick,onChange,onChangesiz}) => {
   return (
     <>
       <div
-        className="col-xl-3 col-md-4 col-sm-5  text-center p-2 border border-dark m-4 shadow-lg "
+        className="col-xl-3 col-md-4 col-sm-5  text-center p-2 border border-dark m-sm-4 shadow-lg "
         style={{ borderRadius: "30%" }}
       >
         <div className="slide-container">
@@ -22,7 +22,7 @@ const Product = ({ item, onClick,onChange,onChangesiz}) => {
                   style={{
                     backgroundImage: `url(${url})`,
                     borderRadius: "100%",
-                    height: "300px",
+                    height: "19rem",
                     backgroundRepeat: "round",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",

@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductNav from './productNav';
-import productsTOP from './products';
+import products from './products';
 import Product from './product';
 
 const Prductoffer = ({onClick,onChange,onChangesiz}) => {
@@ -9,7 +9,7 @@ const Prductoffer = ({onClick,onChange,onChangesiz}) => {
         <ProductNav/>
         <div className='row mt-1' style={{'backgroundColor':' cornflowerblue'}}>
         {
-            productsTOP.filter((item)=>{
+            products.filter((item)=>{
                  return  item.id<50&&item.id>35
             }).map((item)=>{
                 return <Product 

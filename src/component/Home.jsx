@@ -1,9 +1,10 @@
 import React from 'react';
 import Slideshow from './slidshow';
-import Favarit from './favarit';
+import SingleItems from './singleItems'
 import Scrollbox from './scrollbox';
 import Sallbox from './sallbox';
 import Navbarhome from './navbarhome';
+
 
 const Home = ({onClick,onChange,onChangesiz}) => {
     return ( 
@@ -11,7 +12,7 @@ const Home = ({onClick,onChange,onChangesiz}) => {
 <Navbarhome/>
 <Slideshow/>
 
-<Favarit onClick={onClick} onChangesiz={onChangesiz} onChange={onChange}/>
+<SingleItems onClick={onClick} onChangesiz={onChangesiz} onChange={onChange}/>
 <Scrollbox onChange={onChange} onChangesiz={onChangesiz} onClick={onClick}/>
 <Sallbox/>
 

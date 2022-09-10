@@ -1,8 +1,6 @@
 import React from 'react';
 import Collapsbtn from './collapsbutton';
 
-import Footer from './footer';
-
 
 
 const Guide = () => {

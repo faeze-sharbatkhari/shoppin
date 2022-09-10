@@ -1,4 +1,4 @@
-const productsTOP=[
+const products=[
         {id:'1',
         name:"1تاپ" ,
         price:30000,
@@ -85,5 +85,5 @@ const productsTOP=[
     
 
  
-export default productsTOP;
+export default products;
 

@@ -1,7 +1,7 @@
 
 import Product from './product';
 import ProductNav from './productNav';
-import productsTOP from './products';
+import products from './products';
 
 const ProductsSHLVR = ({onClick,onChange,onChangesiz}) => {
   
@@ -10,7 +10,7 @@ const ProductsSHLVR = ({onClick,onChange,onChangesiz}) => {
         <ProductNav/>
         <div className='row'>
         {
-            productsTOP.filter((item)=>{
+            products.filter((item)=>{
                  return  item.id<36&&item.id>28
             }).map((item)=>{
                 return <Product 

@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductNav from './productNav';
-import productsTOP from './products';
+import products from './products';
 import Product from './product';
 
 const PrductTAK = ({onClick,onChange,onChangesiz}) => {
@@ -9,7 +9,7 @@ const PrductTAK = ({onClick,onChange,onChangesiz}) => {
         <ProductNav/>
         <div className='row mt-1' style={{'backgroundColor':'pink'}}>
         {
-            productsTOP.filter((item)=>{
+            products.filter((item)=>{
                  return  item.id<64&&item.id>49
             }).map((item)=>{
                 return <Product 

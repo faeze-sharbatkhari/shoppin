@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/esm/Button';
 import Form from 'react-bootstrap/Form';
-import Footer from './footer';
 import {NavLink} from 'react-router-dom'
 
 function Suport() {
